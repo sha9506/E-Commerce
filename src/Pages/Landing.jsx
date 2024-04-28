@@ -2,9 +2,20 @@ import React from "react";
 import Footer from "../Molecules/Footer/Footer";
 import Navbar from "../Molecules/Navbar/Navbar";
 import SaleIcon from "../Assets/sale.png";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Landing=()=>
 {
+    const navigate= useNavigate();
+    useEffect(()=>
+    {
+        let details= localStorage.getItem('user');
+        if(!details)
+        {
+            navigate("/");
+        }
+    },[])
     
     return(<div>
         <div className="fixed-nav"><Navbar/></div>

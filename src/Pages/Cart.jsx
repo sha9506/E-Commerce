@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Molecules/Footer/Footer";
 import Navbar from "../Molecules/Navbar/Navbar";
@@ -6,6 +7,14 @@ import Navbar from "../Molecules/Navbar/Navbar";
 const Cart=()=>
 {
     const navigate= useNavigate();
+    useEffect(()=>
+    {
+        let details= localStorage.getItem('user');
+        if(!details)
+        {
+            navigate("/");
+        }
+    },[])
 
     return(<div>
         <Navbar/>

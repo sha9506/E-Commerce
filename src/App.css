@@ -23,13 +23,13 @@ body{
   font-size: 40px;
   font-family: sans-serif;
   font-weight: bold;
-  margin-right: 300px;
+  margin-right: 200px;
 }
 .welcome-intro
 {
   font-size: 18px;
   font-family: sans-serif;
-  margin-right: 210px;
+  margin-right: 110px;
   margin-top: 10px;
 }
 .login-form
@@ -99,9 +99,11 @@ body{
 }
 .message
 {
-  font-size: 19px;
+  font-size: 25px;
+  font-weight: bold;
   font-family: sans-serif;
-  color: red;
+  color: rgb(205, 98, 98);
+  margin-left: 230px;
 }
 
 /* Navbar */
@@ -138,7 +140,6 @@ body{
   width: 95%;
   border: 1px white;
   font-size:18px ;
-  font-weight: bold;
 }
 .search-input:focus
 {
@@ -146,7 +147,7 @@ body{
 }
 .search-icon
 {
-  width: 27px;
+  width: 25px;
   height: 24px;
   margin-top: 5px;
 }
@@ -169,6 +170,7 @@ body{
 .dropdown {
   float: left;
   overflow: hidden;
+  margin-top: -11px;
 }
 .dropdown .dropbtn
  {
@@ -219,13 +221,14 @@ body{
 .footer-logo
 {
   font-size: 32px;
-  margin-right: 50px;
+  margin-top: 50px;
+  margin-right: 90px;
 }
 .sections
 {
   font-size: 16px;
   margin-bottom: 5px;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 :hover.sections
 {
@@ -235,8 +238,14 @@ body{
 {
   font-size: 16px;
   font-weight: bold;
-  margin-right: 700px;
+  margin-right: 600px;
+  margin-left: -300px;
   margin-bottom: 5px;
+}
+.icon-item
+{
+  margin-left: -310px;
+
 }
 .icon
 {
@@ -244,9 +253,10 @@ body{
 }
 .creator
 {
-  color: white;
-  text-align: end;
+  color: rgb(0, 0, 0);
+  text-align: center;
   padding: 7px;
+  font-weight: bold;
 }
 .end-box
 {
@@ -325,6 +335,10 @@ body{
   width: 397px;
   margin-bottom: 2px;
   padding: 7px;
+}
+:hover.middle-feature
+{
+  
 }
 .sale-content
 {

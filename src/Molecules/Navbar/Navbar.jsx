@@ -16,20 +16,20 @@ const Navbar=()=>
             </div>
             <div className="buttons" onClick={()=>(navigate('/landing'))}>Home</div>
             <div className="buttons" onClick={()=>(navigate('/products'))}>Product</div>
-            <div className="buttons" >
+            <div className="buttons" onClick={()=>(navigate('/products'))}>Your Orders</div>
+            <div className="buttons" onClick={()=>(navigate('/cart'))}>Cart</div>
+            <div className="buttons"> 
+             <div className="buttons" >
                 <div class="dropdown">
-                    <button class="dropbtn">Catagories</ button>
+                <img className="user-icon" src={UserIcon} alt="profile" />
+                    <button class="dropbtn"> {localStorage.getItem('user')}</ button>
                      <div class="dropdown-content">
-                         <a href="/products">Men</a>
-                         <a href="/products">Women</a>
-                         <a href="/products">Footwear</a>
+                         <a href="/products">Credits</a>
+                         <a href="/products">Details</a>
+                         <a href="/">Logout</a>
                     </div>
                  </div>
             </div>
-            <div className="buttons" onClick={()=>(navigate('/cart'))}>Cart</div>
-            <div className="buttons"> 
-            <img className="user-icon" src={UserIcon} alt="profile" />
-             {localStorage.getItem('user')}
             </div>
     </div>)
 }
