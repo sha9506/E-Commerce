@@ -2,17 +2,29 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import UserIcon from "../../Assets/user.png";
 import SearchIcon from "../../Assets/search.png";
+import { useState } from "react";
 
 const Navbar=()=>
 {
+    const[search, setSearch]=useState('');
     const navigate= useNavigate(); 
 
-    return(<div className="navbar">
+    const handleSearch=()=>
+    {
+        navigate(`/products?search=${search}`);
+    }
+
+
+    return(<div >
+        <div className="navbar">
         <div className="logo">CART-Z</div>
         <div className="search-box">
                 <input type="text" className="search-input"
-                 placeholder="Find Your Desirable Trends"  />
-                <img src={SearchIcon} alt="search-icon" className="search-icon" />
+                 placeholder="Find Your Desirable Trends" 
+                    value={search} 
+                    onChange={(event)=>(setSearch(event.target.value))} />
+                <img src={SearchIcon} alt="search-icon" className="search-icon" 
+                onClick={()=>(handleSearch())} />
             </div>
             <div className="buttons" onClick={()=>(navigate('/landing'))}>Home</div>
             <div className="buttons" onClick={()=>(navigate('/products'))}>Product</div>
@@ -31,6 +43,7 @@ const Navbar=()=>
                  </div>
             </div>
             </div>
+        </div>
     </div>)
 }
 

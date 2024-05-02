@@ -1,6 +1,12 @@
 body{
   background-color: black;
+  scroll-behavior: smooth;
 }
+body::-webkit-scrollbar
+{
+  display:none;
+}
+
 .cart-z
 {
   font-size: 30px;
@@ -110,15 +116,15 @@ body{
 
 .navbar
 {
-  color: white;
   padding: 20px;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: black;
-  width: 100%;  
-  position: fixed;
+  width: 99%;  
 }
+
 .logo
 {
   font-size: 40px;
@@ -488,4 +494,167 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
   font-size: 16px;
   color: white;
   margin-top: 30px;
+}
+
+
+/* products  */
+
+.product-objects
+{
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  behavior: smooth;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product-objects::-webkit-scrollbar
+{
+  display:none;
+}
+.product-list
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.product-info
+{
+  background-color:#6f4f4bb3;
+  color: white;
+  inline-size: 300px;
+  overflow-wrap: break-word;
+  border-radius: 5px;
+  margin-top: -50px;
+  padding: 10px;
+  box-shadow: 15px 19px 13px -3px rgba(0,0,0,0.1);
+}
+.product-title
+{
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
+.product-price
+{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-icon
+{
+  padding: 10px;
+  width: 400px;
+  height: 500px;
+  box-shadow: 15px 19px 13px -3px rgba(0,0,0,0.1);
+}
+
+/* Modal Order confirmed  */
+.modal-main
+{
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0,0.4);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-item
+{
+  background-color: white;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px 2px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+.modal-head
+{
+ display: flex;
+ flex-direction: row;
+ border-bottom: 1px solid rgb(200, 197, 197);
+ padding: 10px;
+ justify-content: space-between;
+ height: 50px;
+}
+.modal-head-title
+{
+  margin-top: 30px;
+  font-weight: bold;
+}
+.card-entry
+{
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+}
+.card-name
+{
+  margin-bottom: 10px;
+
+}
+.card-name-entry
+{
+  border:2px solid  rgb(199, 194, 194);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  width: 90%;
+}
+.card-date
+{
+  margin-bottom: 10px;
+}
+.card-date-entry
+{
+  border:2px solid  rgb(199, 194, 194);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  color: black;
+}
+.more-info
+{
+  border:1px solid  rgb(199, 194, 194);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 90%;
+}
+.modal-footer
+{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.card-cancel
+{
+  border:2px solid  rgb(199, 194, 194);
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.card-pay
+{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(13, 13, 56);
+  color: white;
+  margin-left: 10px;
+}
+
+/* orders  */
+.order-done
+{
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
 }

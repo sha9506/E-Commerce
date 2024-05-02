@@ -18,7 +18,7 @@ const Landing=()=>
     },[])
     
     return(<div>
-        <div className="fixed-nav"><Navbar/></div>
+        <Navbar/>
         <div className="landing"></div>
         <div className="featured">Our Featured Collections</div>
         <div className="featured-collection">

@@ -1,11 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect , useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Molecules/Footer/Footer";
 import Navbar from "../Molecules/Navbar/Navbar";
+import Modal from "../Molecules/Order_Modal";
 
 const Cart=()=>
 {
+    const [showModal,setShowModal]= useState(false)
     const navigate= useNavigate();
     useEffect(()=>
     {
@@ -17,6 +19,9 @@ const Cart=()=>
     },[])
 
     return(<div>
+        {
+            showModal ?<Modal onclose={()=>{setShowModal(false)}}/> : null
+        }
         <Navbar/>
             <div className="cart-bg">
                 <div className="cart-header">
@@ -51,7 +56,7 @@ const Cart=()=>
                             <td>89932 Rs</td>
                         </tr>
                     </table>
-                    <button className="checkout">Proceed to Checkout</button>
+                    <button className="checkout" onClick={()=>{setShowModal(true)}}>Proceed to Order</button>
                 </div>
             </div>
             
