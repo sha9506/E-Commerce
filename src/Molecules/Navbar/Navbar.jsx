@@ -24,12 +24,12 @@ const Navbar=()=>
                     value={search} 
                     onChange={(event)=>(setSearch(event.target.value))} />
                 <img src={SearchIcon} alt="search-icon" className="search-icon" 
-                onClick={()=>(handleSearch())} />
+                onClick={()=>handleSearch()} />
             </div>
-            <div className="buttons" onClick={()=>(navigate('/landing'))}>Home</div>
-            <div className="buttons" onClick={()=>(navigate('/products'))}>Product</div>
-            <div className="buttons" onClick={()=>(navigate('/products'))}>Your Orders</div>
-            <div className="buttons" onClick={()=>(navigate('/cart'))}>Cart</div>
+            <div className="buttons" onClick={()=>navigate('/landing')}>Home</div>
+            <div className="buttons" onClick={()=>navigate('/products')}>Product</div>
+            <div className="buttons" onClick={()=>navigate('/products')}>Your Orders</div>
+            <div className="buttons" onClick={()=>navigate('/cart')}>Cart</div>
             <div className="buttons"> 
              <div className="buttons" >
                 <div class="dropdown">

@@ -27,7 +27,7 @@ let Modal= ({onclose}) =>
           <div className="card-cancel" onClick={()=>{onclose()}}>
             Cancel
           </div>
-          <div className="card-pay" onClick={()=>(navigate('/orders'))}>Pay</div>
+          <div className="card-pay" onClick={()=>navigate('/orders')}>Pay</div>
       </div>
     </div>
 </div>)

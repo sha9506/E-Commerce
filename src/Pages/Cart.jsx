@@ -10,7 +10,9 @@ const Cart = () => {
   const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
   const [total, setTotal] = useState(0);
-  useEffect(() => {
+
+  useEffect(() =>
+  {
     let details = localStorage.getItem("user");
     if (!details) {
       navigate("/");
@@ -62,7 +64,7 @@ const Cart = () => {
         </div>
 
         <div className="cart-button-box">
-          <button className="cart-button">Update Cart</button>
+          <button className="cart-button" onClick={()=>navigate('/products')}>Update Cart</button>
           <button className="cart-button" onClick={() => navigate("/landing")}>
             Return to Shop
           </button>

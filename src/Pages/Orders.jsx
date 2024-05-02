@@ -6,7 +6,9 @@ const Orders=()=>
 {
     return(<div>
         <Navbar/>
-            <div className="order-done">ORDER CONFIRMED</div>
+            <div className="order-page">
+                 <div className="order-done">ORDER CONFIRMED!!</div>
+            </div> 
         <Footer/>
     </div>
     )
